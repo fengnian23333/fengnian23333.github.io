@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>风年年年的博客首页</title>
+    <url>/2025/12/17/%E9%A6%96%E9%A1%B5/</url>
+    <content><![CDATA[<h1 id="风年年年"><a href="#风年年年" class="headerlink" title="风年年年"></a>风年年年</h1><p>欢迎来到符风年的个人博客！这里记录技术、阅读、生活与思考。<br><br><strong>故事的结局重不重要？</strong> —— 或许过程才更值得回味。</p>
+<h2 id="🌟-最新文章"><a href="#🌟-最新文章" class="headerlink" title="🌟 最新文章"></a>🌟 最新文章</h2><ul>
+<li><a href="/2025/12/17/learn-guohezu/">《本周学习记录：学习过河卒》</a> - 2025.12.17<br><em>真有意思</em></li>
+</ul>
+<h2 id="📂-分类导航"><a href="#📂-分类导航" class="headerlink" title="📂 分类导航"></a>📂 分类导航</h2><ul>
+<li><a href="/categories/tech/">技术笔记</a><br><em>代码、工具与前沿探索。</em></li>
+<li><a href="/categories/life/">生活随笔</a><br><em>日常点滴，感悟与分享。</em></li>
+<li><a href="/categories/reading/">读书笔记</a><br><em>书海拾贝，思想火花。</em></li>
+<li><a href="/categories/projects/">项目展示</a><br><em>动手实践，从idea到上线。</em></li>
+</ul>
+<h2 id="🏷️-热门标签"><a href="#🏷️-热门标签" class="headerlink" title="🏷️ 热门标签"></a>🏷️ 热门标签</h2><p><code>暂无</code></p>
+<blockquote>
+<p><em>点击标签跳转到相关文章，探索更多主题。</em></p>
+</blockquote>
+<h2 id="📖-关于我"><a href="#📖-关于我" class="headerlink" title="📖 关于我"></a>📖 关于我</h2><p>你好！我是<strong>符嘉哲</strong>（笔名：风年年年），一名前端工程师兼独立开发者。<br><br>在这里，我分享：</p>
+<ul>
+<li><strong>技术学习心得</strong>：暂无</li>
+<li><strong>生活中的观察</strong>：暂无</li>
+<li><strong>有趣的发现</strong>：暂无</li>
+</ul>
+<blockquote>
+<p>“保持好奇，持续成长。生活如代码，总有 bug，但修复后更优雅。”</p>
+</blockquote>
+<p><img src="/images/20200504005349_ljnrh.jpg" alt="头像">  </p>
+<h2 id="📊-博客统计"><a href="#📊-博客统计" class="headerlink" title="📊 博客统计"></a>📊 博客统计</h2><ul>
+<li><strong>文章总数</strong>：1 篇（持续更新中…）</li>
+<li><strong>分类数量</strong>：4 个</li>
+<li><strong>标签数量</strong>：0 个</li>
+<li><strong>运行天数</strong>：1 天</li>
+</ul>
+<h2 id="🔗-快速链接"><a href="#🔗-快速链接" class="headerlink" title="🔗 快速链接"></a>🔗 快速链接</h2><ul>
+<li><a href="/archives/">归档</a> - 按时间查看所有文章</li>
+<li><a href="/tags/">标签云</a> - 探索所有标签</li>
+<li><a href="/author/">博客作者</a> - 更多个人信息</li>
+<li><a href="/atom.xml">RSS订阅</a> - 订阅更新，随时跟进</li>
+</ul>
+<h2 id="💬-与我联系"><a href="#💬-与我联系" class="headerlink" title="💬 与我联系"></a>💬 与我联系</h2><ul>
+<li><strong>GitHub</strong>: <a href="https://github.com/fengnian23333">@fengnian23333</a><br><em>开源项目与代码仓库。</em></li>
+<li><strong>邮箱</strong>: <a href="mailto:&#50;&#x37;&#x36;&#55;&#52;&#x31;&#51;&#x31;&#x38;&#50;&#x40;&#113;&#113;&#x2e;&#99;&#x6f;&#109;">2767413182@qq.com</a><br><em>欢迎讨论技术或生活话题。</em></li>
+</ul>
+<hr>
+<p>*© 2025 符风年 · 由 ❤️ 和咖啡驱动 · <a href="/changelog/">更新日志</a> · Powered by me *</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>学习过河卒</title>
+    <url>/2025/12/17/learn-guohezu/</url>
+    <content><![CDATA[<h1 id="本周学习记录"><a href="#本周学习记录" class="headerlink" title="本周学习记录"></a>本周学习记录</h1><h3 id="过河卒"><a href="#过河卒" class="headerlink" title="过河卒"></a>过河卒</h3><p>最初的设想是遍历下右路径，遇到障碍记录，重新跑，即<strong>暴力递归</strong>。</p>
+<p>但时间复杂度太高了 ——O (2^(n+m))，所以这个想法显然是有问题的，看到右边标签有动态规划数组，就去进修了一下。</p>
+<h4 id="动态规划："><a href="#动态规划：" class="headerlink" title="动态规划："></a>动态规划：</h4><p>如果一个问题可以拆分成有限个子问题，并且可以通过函数递推式来计算出结果，则可使用动态规划来解决。</p>
+<blockquote>
+<p>*动态规划有几个典型特征，<strong>最优子结构、</strong>&#x20;状态转移方程**、边界、重叠子问题 **。*</p>
+<p>—— 知乎《<strong>看一遍就理解：动态规划详解</strong>》</p>
+</blockquote>
+<p>过河卒这道题中，要求求出由原点到提供点的所有路径数，举一个简单的例子：</p>
+<p>左图中，假定我要到达的点是 B，则必然经过 A 的右侧点和下方点，这两点的路径数均为一，那么，我到达 B 点的路径数就等于到达 A 右侧点和下方点的路径数之和，因为要去 B 点必然要经过这两点。</p>
+<p>右图中，由 A 至 B 的路径数为 6，这同样可以由上题的思想得来，只是需要不断往前推，最终，我们可以总结出一个这样的递推公式：</p>
+<p>dp（B） &#x3D; dp（B~ 上～）+dp (B~ 左～)</p>
+<p>… 即通用公式为: dp [i][j] &#x3D; dp [i-1][j] + dp [i][j-1]</p>
+<figure class="highlight inform7"><table><tr><td class="code"><pre><span class="line">for (int i = 1;i&lt;=n;i++)&#123;</span><br><span class="line">    for (int j = 1;j&lt;=m;j++)&#123;</span><br><span class="line">        if(control<span class="comment">[i]</span><span class="comment">[j]</span>==false)&#123;</span><br><span class="line">            dp<span class="comment">[i]</span><span class="comment">[j]</span>=dp<span class="comment">[i-1]</span><span class="comment">[j]</span>+dp<span class="comment">[i]</span><span class="comment">[j-1]</span>;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            dp<span class="comment">[i]</span><span class="comment">[j]</span>=0;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>要想跳到第 10 级台阶，要么是先跳到第 9 级，然后再跳 1 级台阶上去；要么是先跳到第 8 级，然后一次迈 2 级台阶上去。</p>
+</blockquote>
+<p>—— 知乎《<strong>看一遍就理解：动态规划详解</strong>》</p>
+<p>但这道题并非如此简单，存在一只马及其一次行动可以跳跃的点作为障碍，卒是不能碰到这些点的，换算到代码中，可以设计这一点的路径数为 0，也就不会影响这一点右和下的点的递推计算。</p>
+<p>然后是边界点，例如左下角的点，就只能由上方的点走来，因此只能为 1，右上角同理。</p>
+<p>至此，所有的思考工作均已完成，开始代码实现：</p>
+<figure class="highlight prolog"><table><tr><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;math.h&gt;</span><br><span class="line">#include &lt;stdbool.h&gt;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    int n,m,x,y;</span><br><span class="line">    scanf(<span class="string">&quot;%d %d %d %d&quot;</span>,&amp;n,&amp;m,&amp;x,&amp;y);</span><br><span class="line">    long long dp[n+<span class="number">1</span>][m+<span class="number">1</span>];</span><br><span class="line">    bool control[n+<span class="number">1</span>][m+<span class="number">1</span>];</span><br><span class="line">    for (int i =<span class="number">0</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        for(int j=<span class="number">0</span>;j&lt;=m;j++)&#123;</span><br><span class="line">            control[i][j]=false;</span><br><span class="line">            dp[i][j]=<span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    int houre_control[<span class="number">9</span>][<span class="number">2</span>]=&#123;</span><br><span class="line">        &#123;<span class="number">0</span>,<span class="number">0</span>&#125;,</span><br><span class="line">        &#123;<span class="number">1</span>, <span class="number">2</span>&#125;, &#123;<span class="number">1</span>, <span class="number">-2</span>&#125;, &#123;<span class="number">-1</span>, <span class="number">2</span>&#125;, &#123;<span class="number">-1</span>, <span class="number">-2</span>&#125;,</span><br><span class="line">        &#123;<span class="number">2</span>, <span class="number">1</span>&#125;, &#123;<span class="number">2</span>, <span class="number">-1</span>&#125;, &#123;<span class="number">-2</span>, <span class="number">1</span>&#125;, &#123;<span class="number">-2</span>, <span class="number">-1</span>&#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    for(int k=<span class="number">0</span>;k&lt;<span class="number">9</span>;k++)&#123;</span><br><span class="line">        int nx=x+houre_control[k][<span class="number">0</span>];</span><br><span class="line">        int ny=y+houre_control[k][<span class="number">1</span>];</span><br><span class="line">        if(nx&gt;=<span class="number">0</span>&amp;&amp;nx&lt;=n&amp;&amp;ny&gt;=<span class="number">0</span>&amp;&amp;ny&lt;=m)&#123;</span><br><span class="line">            control[nx][ny]=true;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    dp[<span class="number">0</span>][<span class="number">0</span>]=control[<span class="number">0</span>][<span class="number">0</span>] ? <span class="number">0</span>: <span class="number">1</span>;</span><br><span class="line">    for (int j=<span class="number">1</span>;j&lt;=m;j++)&#123;</span><br><span class="line">        if(control[<span class="number">0</span>][j]==false)&#123;</span><br><span class="line">            dp[<span class="number">0</span>][j]=dp[<span class="number">0</span>][j<span class="number">-1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    for (int i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        if(control[i][<span class="number">0</span>]==false)&#123;</span><br><span class="line">            dp[i][<span class="number">0</span>]=dp[i<span class="number">-1</span>][<span class="number">0</span>];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    for (int i = <span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        for (int j = <span class="number">1</span>;j&lt;=m;j++)&#123;</span><br><span class="line">            if(control[i][j]==false)&#123;</span><br><span class="line">                dp[i][j]=dp[i<span class="number">-1</span>][j]+dp[i][j<span class="number">-1</span>];</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                dp[i][j]=<span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    printf(<span class="string">&quot;%lld&quot;</span>,dp[n][m]);</span><br><span class="line">    return <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>dp 数组用来存储对应点的路径数，bool 类型的 control 数组用来记录被马控制的点，第一个两层 for 循环遍历初始化这两个数组，定义一个 9×2 的数组存储障碍点由马推导出的变化值，第二个 for 循环将对应控制点计算出并标记进 control 数组为 true，这里额外的 if 语句用于检验这一点是否在边界内。</p>
+<p>然后就是递推计算，每一步赋值前均检验此点是否为控制点，若是直接赋值为 0。</p>
+<p>将上边界和左边界的点均定义为 1，最后遍历计算剩余点得出结果。</p>
+<p>说实话，这题蛮难的，我从开学一直到前天才做出来，期间一直不太理解什么是动态，后来也是看了B站的一个讲解才理解一半并开始做题。</p>
+<p>总结，如果没有障碍，从 (0,0) 到 (n,m) 的路径数是一个组合数问题，可以用动态规划求解。存在障碍时，只需要将障碍点的路径数设为 0，表示不可达，然后按照同样的动态规划方法计算。</p>
+<hr>
+<p><strong>动态规划状态定义</strong>：定义二维数组 dp，dp [i][j] 表示从起点到点 (i,j) 的路径数。</p>
+<p><strong>状态转移方程</strong>：对于非障碍点 (i,j)，由于卒只能向右或向下移动，所以到达 (i,j) 的路径数等于到达其上方点 (i-1,j) 和左方点 (i,j-1) 的路径数之和。即：</p>
+<p>dp[i][j] &#x3D; dp[i-1][j] + dp[i][j-1]</p>
+<p>对于障碍点，dp [i][j] &#x3D; 0。</p>
+<p><strong>边界条件</strong>：</p>
+<ul>
+<li><p>起点 (0,0)：如果不是障碍，则 dp [0][0]&#x3D;1，否则为 0。</p>
+</li>
+<li><p>第一行（i&#x3D;0，j&gt;0）：只能从左方来，所以如果 (0,j) 不是障碍，则 dp [0][j]&#x3D;dp [0][j-1]，否则为 0。</p>
+</li>
+<li><p>第一列（i&gt;0，j&#x3D;0）：只能从上方来，所以如果 (i,0) 不是障碍，则 dp [i][0]&#x3D;dp [i-1][0]，否则为 0。</p>
+</li>
+</ul>
+<p><strong>计算顺序</strong>：按照行优先的顺序，从 (0,0) 开始，依次计算每个点的 dp 值，直到终点 (n,m)。</p>
+<p><strong>马的控制点</strong>：马的位置及其 8 个控制点（马走日字）需要标记为障碍。注意这些点可能超出棋盘范围，需要判断。</p>
+<h3 id="快速幂"><a href="#快速幂" class="headerlink" title="快速幂"></a>快速幂</h3><p>这个是由一个 io 题启发我去学的，原题找不到了。</p>
+<p>快速幂，顾名思义，快速的算出某数的 n 次方</p>
+<p>传统计算方法：a^n &#x3D; a × a × a × … × a（n 次）</p>
+<p>时间复杂度：O (n)，当 n 非常大时（如 n&#x3D;10^9）会非常慢。</p>
+<p>我学的是二进制的思想：</p>
+<p>例如：n^m 中 m &#x3D; 15 (10)。十进制的 15 转换为二进制是 1111 (2)。</p>
+<p>** 十进制转二进制的转换关系：**15&#x3D; 2^3×1+2^2×1+2^1×1+2^0×1</p>
+<p>n&#x3D;3 时，可以用这样的幂分解，3^15&#x3D;3^(2^3+2^2+2^1+2^0)&#x3D;3^(2^3)⋅3^(2^2)⋅3^(2^1)⋅3^(2^0)</p>
+<p>一个关键的公式：n^(2^(m−1)) × n^(2^(m−1)) &#x3D; n^(2^m)</p>
+<p>由这个公式，我们可以通过小的次方数，累乘得到更高次方的数，代码实现：</p>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="built_in">long</span> <span class="built_in">long</span> <span class="built_in">int</span> <span class="title">quik_power</span>(<span class="params"><span class="built_in">int</span> <span class="keyword">base</span>, <span class="built_in">int</span> minumber</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">long</span> <span class="built_in">long</span> <span class="built_in">int</span> result = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (minumber &gt; <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (minumber &amp; <span class="number">1</span>)</span><br><span class="line">            result *= <span class="keyword">base</span>;</span><br><span class="line">        <span class="keyword">base</span> *= <span class="keyword">base</span>;</span><br><span class="line">        minumber &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="铺地毯"><a href="#铺地毯" class="headerlink" title="铺地毯"></a>铺地毯</h3><p>这题蛮好做的其实，但是我最开始的思路是二维数组暴力枚举，也是成功超时，然后去学了学思路，发现这题的思路贼简单，初始化一个巨大的二维数组并赋值为 0，输入每个地毯的范围，接着将输入的坐标逆序查询是否在由 n—1 地毯的范围内，如果无结果就输出-1，查询到直接 break 输出对应地毯。</p>
+<p>代码实现：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n);</span><br><span class="line">    <span class="type">int</span> a[n<span class="number">+1</span>],b[n<span class="number">+1</span>],g[n<span class="number">+1</span>],k[n<span class="number">+1</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d %d %d %d&quot;</span>,&amp;a[i],&amp;b[i],&amp;g[i],&amp;k[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> x,y,temp=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>,&amp;x,&amp;y);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = n;i&gt;=<span class="number">1</span>;i--)&#123;</span><br><span class="line">        <span class="keyword">if</span>(x&gt;=a[i]&amp;&amp;x&lt;=a[i]+g[i]&amp;&amp;y&gt;=b[i]&amp;&amp;y&lt;=b[i]+k[i])&#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,i);</span><br><span class="line">            temp++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(temp==<span class="number">0</span>)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;-1&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>tech</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+</search>

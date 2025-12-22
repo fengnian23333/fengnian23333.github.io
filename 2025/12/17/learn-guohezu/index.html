@@ -17,13 +17,13 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"fengnian23333.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"fengnian23333.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true,"path":"search.xml"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="真有意思，一篇关于过河卒算法的笔记。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="学习过河卒">
-<meta property="og:url" content="https://fengnian23333.github.io/2025/12/17/learn-guohezu/index.html">
+<meta property="og:url" content="https://fengnian23333.github.io/2025/12/17/learn-guohezu/">
 <meta property="og:site_name" content="风年年年">
 <meta property="og:description" content="真有意思，一篇关于过河卒算法的笔记。">
 <meta property="og:locale" content="zh_CN">
@@ -106,6 +106,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -140,11 +141,38 @@
     <a href="/author/" rel="section"><i class="fa fa-user fa-fw"></i>博客作者</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -154,6 +182,7 @@
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
+  <div class="reading-progress-bar"></div>
 
 
     <main class="main">
@@ -171,7 +200,7 @@
     <link itemprop="mainEntityOfPage" href="https://fengnian23333.github.io/2025/12/17/learn-guohezu/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/20200504005349_ljnrh.jpg">
       <meta itemprop="name" content="符风年">
       <meta itemprop="description" content="符风年的个人博客，记录技术、阅读、生活与思考。">
     </span>
@@ -205,6 +234,27 @@
             </span>
 
           
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4.1k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
             <div class="post-description">真有意思，一篇关于过河卒算法的笔记。</div>
 
         </div>
@@ -228,7 +278,7 @@
 <p>右图中，由 A 至 B 的路径数为 6，这同样可以由上题的思想得来，只是需要不断往前推，最终，我们可以总结出一个这样的递推公式：</p>
 <p>dp（B） &#x3D; dp（B~ 上～）+dp (B~ 左～)</p>
 <p>… 即通用公式为: dp [i][j] &#x3D; dp [i-1][j] + dp [i][j-1]</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">for (int i = 1;i&lt;=n;i++)&#123;</span><br><span class="line">    for (int j = 1;j&lt;=m;j++)&#123;</span><br><span class="line">        if(control[i][j]==false)&#123;</span><br><span class="line">            dp[i][j]=dp[i-1][j]+dp[i][j-1];</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            dp[i][j]=0;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">for (int i = 1;i&lt;=n;i++)&#123;</span><br><span class="line">    for (int j = 1;j&lt;=m;j++)&#123;</span><br><span class="line">        if(control<span class="comment">[i]</span><span class="comment">[j]</span>==false)&#123;</span><br><span class="line">            dp<span class="comment">[i]</span><span class="comment">[j]</span>=dp<span class="comment">[i-1]</span><span class="comment">[j]</span>+dp<span class="comment">[i]</span><span class="comment">[j-1]</span>;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            dp<span class="comment">[i]</span><span class="comment">[j]</span>=0;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>要想跳到第 10 级台阶，要么是先跳到第 9 级，然后再跳 1 级台阶上去；要么是先跳到第 8 级，然后一次迈 2 级台阶上去。</p>
@@ -237,7 +287,7 @@
 <p>但这道题并非如此简单，存在一只马及其一次行动可以跳跃的点作为障碍，卒是不能碰到这些点的，换算到代码中，可以设计这一点的路径数为 0，也就不会影响这一点右和下的点的递推计算。</p>
 <p>然后是边界点，例如左下角的点，就只能由上方的点走来，因此只能为 1，右上角同理。</p>
 <p>至此，所有的思考工作均已完成，开始代码实现：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;math.h&gt;</span><br><span class="line">#include &lt;stdbool.h&gt;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    int n,m,x,y;</span><br><span class="line">    scanf(&quot;%d %d %d %d&quot;,&amp;n,&amp;m,&amp;x,&amp;y);</span><br><span class="line">    long long dp[n+1][m+1];</span><br><span class="line">    bool control[n+1][m+1];</span><br><span class="line">    for (int i =0;i&lt;=n;i++)&#123;</span><br><span class="line">        for(int j=0;j&lt;=m;j++)&#123;</span><br><span class="line">            control[i][j]=false;</span><br><span class="line">            dp[i][j]=0;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    int houre_control[9][2]=&#123;</span><br><span class="line">        &#123;0,0&#125;,</span><br><span class="line">        &#123;1, 2&#125;, &#123;1, -2&#125;, &#123;-1, 2&#125;, &#123;-1, -2&#125;,</span><br><span class="line">        &#123;2, 1&#125;, &#123;2, -1&#125;, &#123;-2, 1&#125;, &#123;-2, -1&#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    for(int k=0;k&lt;9;k++)&#123;</span><br><span class="line">        int nx=x+houre_control[k][0];</span><br><span class="line">        int ny=y+houre_control[k][1];</span><br><span class="line">        if(nx&gt;=0&amp;&amp;nx&lt;=n&amp;&amp;ny&gt;=0&amp;&amp;ny&lt;=m)&#123;</span><br><span class="line">            control[nx][ny]=true;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    dp[0][0]=control[0][0] ? 0: 1;</span><br><span class="line">    for (int j=1;j&lt;=m;j++)&#123;</span><br><span class="line">        if(control[0][j]==false)&#123;</span><br><span class="line">            dp[0][j]=dp[0][j-1];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    for (int i=1;i&lt;=n;i++)&#123;</span><br><span class="line">        if(control[i][0]==false)&#123;</span><br><span class="line">            dp[i][0]=dp[i-1][0];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    for (int i = 1;i&lt;=n;i++)&#123;</span><br><span class="line">        for (int j = 1;j&lt;=m;j++)&#123;</span><br><span class="line">            if(control[i][j]==false)&#123;</span><br><span class="line">                dp[i][j]=dp[i-1][j]+dp[i][j-1];</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                dp[i][j]=0;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    printf(&quot;%lld&quot;,dp[n][m]);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;math.h&gt;</span><br><span class="line">#include &lt;stdbool.h&gt;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    int n,m,x,y;</span><br><span class="line">    scanf(<span class="string">&quot;%d %d %d %d&quot;</span>,&amp;n,&amp;m,&amp;x,&amp;y);</span><br><span class="line">    long long dp[n+<span class="number">1</span>][m+<span class="number">1</span>];</span><br><span class="line">    bool control[n+<span class="number">1</span>][m+<span class="number">1</span>];</span><br><span class="line">    for (int i =<span class="number">0</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        for(int j=<span class="number">0</span>;j&lt;=m;j++)&#123;</span><br><span class="line">            control[i][j]=false;</span><br><span class="line">            dp[i][j]=<span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    int houre_control[<span class="number">9</span>][<span class="number">2</span>]=&#123;</span><br><span class="line">        &#123;<span class="number">0</span>,<span class="number">0</span>&#125;,</span><br><span class="line">        &#123;<span class="number">1</span>, <span class="number">2</span>&#125;, &#123;<span class="number">1</span>, <span class="number">-2</span>&#125;, &#123;<span class="number">-1</span>, <span class="number">2</span>&#125;, &#123;<span class="number">-1</span>, <span class="number">-2</span>&#125;,</span><br><span class="line">        &#123;<span class="number">2</span>, <span class="number">1</span>&#125;, &#123;<span class="number">2</span>, <span class="number">-1</span>&#125;, &#123;<span class="number">-2</span>, <span class="number">1</span>&#125;, &#123;<span class="number">-2</span>, <span class="number">-1</span>&#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    for(int k=<span class="number">0</span>;k&lt;<span class="number">9</span>;k++)&#123;</span><br><span class="line">        int nx=x+houre_control[k][<span class="number">0</span>];</span><br><span class="line">        int ny=y+houre_control[k][<span class="number">1</span>];</span><br><span class="line">        if(nx&gt;=<span class="number">0</span>&amp;&amp;nx&lt;=n&amp;&amp;ny&gt;=<span class="number">0</span>&amp;&amp;ny&lt;=m)&#123;</span><br><span class="line">            control[nx][ny]=true;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    dp[<span class="number">0</span>][<span class="number">0</span>]=control[<span class="number">0</span>][<span class="number">0</span>] ? <span class="number">0</span>: <span class="number">1</span>;</span><br><span class="line">    for (int j=<span class="number">1</span>;j&lt;=m;j++)&#123;</span><br><span class="line">        if(control[<span class="number">0</span>][j]==false)&#123;</span><br><span class="line">            dp[<span class="number">0</span>][j]=dp[<span class="number">0</span>][j<span class="number">-1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    for (int i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        if(control[i][<span class="number">0</span>]==false)&#123;</span><br><span class="line">            dp[i][<span class="number">0</span>]=dp[i<span class="number">-1</span>][<span class="number">0</span>];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    for (int i = <span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        for (int j = <span class="number">1</span>;j&lt;=m;j++)&#123;</span><br><span class="line">            if(control[i][j]==false)&#123;</span><br><span class="line">                dp[i][j]=dp[i<span class="number">-1</span>][j]+dp[i][j<span class="number">-1</span>];</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                dp[i][j]=<span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    printf(<span class="string">&quot;%lld&quot;</span>,dp[n][m]);</span><br><span class="line">    return <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>dp 数组用来存储对应点的路径数，bool 类型的 control 数组用来记录被马控制的点，第一个两层 for 循环遍历初始化这两个数组，定义一个 9×2 的数组存储障碍点由马推导出的变化值，第二个 for 循环将对应控制点计算出并标记进 control 数组为 true，这里额外的 if 语句用于检验这一点是否在边界内。</p>
 <p>然后就是递推计算，每一步赋值前均检验此点是否为控制点，若是直接赋值为 0。</p>
@@ -270,11 +320,11 @@
 <p>n&#x3D;3 时，可以用这样的幂分解，3^15&#x3D;3^(2^3+2^2+2^1+2^0)&#x3D;3^(2^3)⋅3^(2^2)⋅3^(2^1)⋅3^(2^0)</p>
 <p>一个关键的公式：n^(2^(m−1)) × n^(2^(m−1)) &#x3D; n^(2^m)</p>
 <p>由这个公式，我们可以通过小的次方数，累乘得到更高次方的数，代码实现：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">long long int quik_power(int base, int minumber)</span><br><span class="line">&#123;</span><br><span class="line">    long long int result = 1;</span><br><span class="line">    while (minumber &gt; 0)</span><br><span class="line">    &#123;</span><br><span class="line">        if (minumber &amp; 1)</span><br><span class="line">            result *= base;</span><br><span class="line">        base *= base;</span><br><span class="line">        minumber &gt;&gt;= 1;</span><br><span class="line">    &#125;</span><br><span class="line">    return result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="built_in">long</span> <span class="built_in">long</span> <span class="built_in">int</span> <span class="title">quik_power</span>(<span class="params"><span class="built_in">int</span> <span class="keyword">base</span>, <span class="built_in">int</span> minumber</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">long</span> <span class="built_in">long</span> <span class="built_in">int</span> result = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (minumber &gt; <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (minumber &amp; <span class="number">1</span>)</span><br><span class="line">            result *= <span class="keyword">base</span>;</span><br><span class="line">        <span class="keyword">base</span> *= <span class="keyword">base</span>;</span><br><span class="line">        minumber &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="铺地毯"><a href="#铺地毯" class="headerlink" title="铺地毯"></a>铺地毯</h3><p>这题蛮好做的其实，但是我最开始的思路是二维数组暴力枚举，也是成功超时，然后去学了学思路，发现这题的思路贼简单，初始化一个巨大的二维数组并赋值为 0，输入每个地毯的范围，接着将输入的坐标逆序查询是否在由 n—1 地毯的范围内，如果无结果就输出-1，查询到直接 break 输出对应地毯。</p>
 <p>代码实现：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;math.h&gt;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    int n;</span><br><span class="line">    scanf(&quot;%d&quot;,&amp;n);</span><br><span class="line">    int a[n+1],b[n+1],g[n+1],k[n+1];</span><br><span class="line">    for(int i = 1;i&lt;=n;i++)&#123;</span><br><span class="line">        scanf(&quot;%d %d %d %d&quot;,&amp;a[i],&amp;b[i],&amp;g[i],&amp;k[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    int x,y,temp=0;</span><br><span class="line">    scanf(&quot;%d %d&quot;,&amp;x,&amp;y);</span><br><span class="line">    for (int i = n;i&gt;=1;i--)&#123;</span><br><span class="line">        if(x&gt;=a[i]&amp;&amp;x&lt;=a[i]+g[i]&amp;&amp;y&gt;=b[i]&amp;&amp;y&lt;=b[i]+k[i])&#123;</span><br><span class="line">            printf(&quot;%d&quot;,i);</span><br><span class="line">            temp++;</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    if(temp==0)&#123;</span><br><span class="line">        printf(&quot;-1&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n);</span><br><span class="line">    <span class="type">int</span> a[n<span class="number">+1</span>],b[n<span class="number">+1</span>],g[n<span class="number">+1</span>],k[n<span class="number">+1</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d %d %d %d&quot;</span>,&amp;a[i],&amp;b[i],&amp;g[i],&amp;k[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> x,y,temp=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>,&amp;x,&amp;y);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = n;i&gt;=<span class="number">1</span>;i--)&#123;</span><br><span class="line">        <span class="keyword">if</span>(x&gt;=a[i]&amp;&amp;x&lt;=a[i]+g[i]&amp;&amp;y&gt;=b[i]&amp;&amp;y&lt;=b[i]+k[i])&#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,i);</span><br><span class="line">            temp++;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(temp==<span class="number">0</span>)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;-1&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -361,6 +411,8 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="符风年"
+      src="/images/20200504005349_ljnrh.jpg">
   <p class="site-author-name" itemprop="name">符风年</p>
   <div class="site-description" itemprop="description">符风年的个人博客，记录技术、阅读、生活与思考。</div>
 </div>
@@ -380,11 +432,21 @@
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
         <span class="site-state-item-count">2</span>
-        <span class="site-state-item-name">标签</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/fengnian23333" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;fengnian23333" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/2767413182@qq.com" title="E-Mail → 2767413182@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
 
 
 
@@ -411,12 +473,42 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">符风年</span>
+  <span class="author" itemprop="copyrightHolder">风年先生 | 保留所有权利</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">5k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">4 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 
@@ -450,6 +542,10 @@
   
 
 
+
+
+  
+<script src="/js/local-search.js"></script>
 
 
 
