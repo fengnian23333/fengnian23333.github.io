@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>近况（2026.3.24）</title>
+    <url>/2026/03/24/%E8%BF%91%E5%86%B5/</url>
+    <content><![CDATA[<h1 id="搞一个项目————自定义题库答题软件"><a href="#搞一个项目————自定义题库答题软件" class="headerlink" title="搞一个项目————自定义题库答题软件"></a>搞一个项目————自定义题库答题软件</h1><p>目前需要实现的功能太多，总结起来实在麻烦，还要备考计算机二级考试，属实麻烦啊。</p>
+<p>过段时间把项目策划给写出来，另外还想部署一下codex。</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>生活</tag>
+        <tag>日常</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>学习过河卒</title>
     <url>/2025/12/17/learn-guohezu/</url>
     <content><![CDATA[<h1 id="本周学习记录"><a href="#本周学习记录" class="headerlink" title="本周学习记录"></a>本周学习记录</h1><h3 id="过河卒"><a href="#过河卒" class="headerlink" title="过河卒"></a>过河卒</h3><p>最初的设想是遍历下右路径，遇到障碍记录，重新跑，即<strong>暴力递归</strong>。</p>
@@ -69,20 +83,6 @@
         <tag>C语言</tag>
         <tag>学习</tag>
         <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>近况（2026.3.24）</title>
-    <url>/2026/03/24/%E8%BF%91%E5%86%B5/</url>
-    <content><![CDATA[<h1 id="搞一个项目————自定义题库答题软件"><a href="#搞一个项目————自定义题库答题软件" class="headerlink" title="搞一个项目————自定义题库答题软件"></a>搞一个项目————自定义题库答题软件</h1><p>目前需要实现的功能太多，总结起来实在麻烦，还要备考计算机二级考试，属实麻烦啊。</p>
-<p>过段时间把项目策划给写出来，另外还想部署一下codex。</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>生活</tag>
-        <tag>日常</tag>
       </tags>
   </entry>
 </search>
