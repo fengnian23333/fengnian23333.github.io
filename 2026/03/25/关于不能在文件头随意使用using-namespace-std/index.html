@@ -20,31 +20,34 @@
     var CONFIG = {"hostname":"fengnian23333.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true,"path":"search.xml"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="符风年的个人博客，记录技术、阅读、生活与思考。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="风年年年">
-<meta property="og:url" content="https://fengnian23333.github.io/blog/">
+  <meta name="description" content="在 C++ 里，using namespace std; 不是不能用，而是不能随意使用（尤其是大型项目、工程开发中）。核心原因只有一个：它会把标准库的所有名称全部暴露到全局作用域，打破了命名空间的隔离保护。 先通俗讲底层逻辑：namespace（命名空间）本质是代码的「文件夹」，std 是 C++ 标准库的专属文件夹，里面装了 cout&#x2F;string&#x2F;vector&#x2F;s">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于不能在文件头随意使用using namespace std">
+<meta property="og:url" content="https://fengnian23333.github.io/2026/03/25/%E5%85%B3%E4%BA%8E%E4%B8%8D%E8%83%BD%E5%9C%A8%E6%96%87%E4%BB%B6%E5%A4%B4%E9%9A%8F%E6%84%8F%E4%BD%BF%E7%94%A8using-namespace-std/">
 <meta property="og:site_name" content="风年年年">
-<meta property="og:description" content="符风年的个人博客，记录技术、阅读、生活与思考。">
+<meta property="og:description" content="在 C++ 里，using namespace std; 不是不能用，而是不能随意使用（尤其是大型项目、工程开发中）。核心原因只有一个：它会把标准库的所有名称全部暴露到全局作用域，打破了命名空间的隔离保护。 先通俗讲底层逻辑：namespace（命名空间）本质是代码的「文件夹」，std 是 C++ 标准库的专属文件夹，里面装了 cout&#x2F;string&#x2F;vector&#x2F;s">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-03-25T10:58:27.000Z">
+<meta property="article:modified_time" content="2026-03-25T11:06:56.338Z">
 <meta property="article:author" content="符风年">
-<meta property="article:tag" content="个人博客, 符嘉哲, 风年年年, 风年, 技术, 生活, 随笔">
+<meta property="article:tag" content="c++">
+<meta property="article:tag" content="使用规范">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://fengnian23333.github.io/blog/">
+<link rel="canonical" href="https://fengnian23333.github.io/2026/03/25/%E5%85%B3%E4%BA%8E%E4%B8%8D%E8%83%BD%E5%9C%A8%E6%96%87%E4%BB%B6%E5%A4%B4%E9%9A%8F%E6%84%8F%E4%BD%BF%E7%94%A8using-namespace-std/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>风年年年</title>
+  <title>关于不能在文件头随意使用using namespace std | 风年年年</title>
   
 
 
@@ -192,9 +195,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -210,10 +214,9 @@
       <meta itemprop="name" content="风年年年">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2026/03/25/%E5%85%B3%E4%BA%8E%E4%B8%8D%E8%83%BD%E5%9C%A8%E6%96%87%E4%BB%B6%E5%A4%B4%E9%9A%8F%E6%84%8F%E4%BD%BF%E7%94%A8using-namespace-std/" class="post-title-link" itemprop="url">关于不能在文件头随意使用using namespace std</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          关于不能在文件头随意使用using namespace std
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -226,7 +229,14 @@
               <time title="创建时间：2026-03-25 18:58:27 / 修改时间：19:06:56" itemprop="dateCreated datePublished" datetime="2026-03-25T18:58:27+08:00">2026-03-25</time>
             </span>
 
-          <br>
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
@@ -251,7 +261,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>在 C++ 里，<code>using namespace std;</code> 不是<strong>不能用</strong>，而是<strong>不能随意使用</strong>（尤其是大型项目、工程开发中）。<br>核心原因只有一个：<strong>它会把标准库的所有名称全部暴露到全局作用域，打破了命名空间的隔离保护</strong>。</p>
+        <p>在 C++ 里，<code>using namespace std;</code> 不是<strong>不能用</strong>，而是<strong>不能随意使用</strong>（尤其是大型项目、工程开发中）。<br>核心原因只有一个：<strong>它会把标准库的所有名称全部暴露到全局作用域，打破了命名空间的隔离保护</strong>。</p>
 <p>先通俗讲底层逻辑：<br><code>namespace</code>（命名空间）本质是<strong>代码的「文件夹」</strong>，<code>std</code> 是 C++ 标准库的专属文件夹，里面装了 <code>cout</code>&#x2F;<code>string</code>&#x2F;<code>vector</code>&#x2F;<code>sort</code> 等所有标准功能。<br><code>using namespace std;</code> 相当于<strong>直接把这个文件夹里的所有文件，全部拖到桌面（全局作用域）</strong>，短期省事，长期全是坑。</p>
 <hr>
 <h1 id="乱用-using-namespace-std-将会带来的四个常见问题"><a href="#乱用-using-namespace-std-将会带来的四个常见问题" class="headerlink" title="乱用 using namespace std; 将会带来的四个常见问题"></a>乱用 <code>using namespace std;</code> 将会带来的四个常见问题</h1><h2 id="名字冲突"><a href="#名字冲突" class="headerlink" title="名字冲突"></a>名字冲突</h2><p>你自定义的变量&#x2F;函数&#x2F;类，很可能和 <code>std</code> 里的名称重名，直接导致<strong>编译报错</strong>，甚至出现诡异的逻辑错误。</p>
@@ -283,205 +293,34 @@
 
 <hr>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/c/" rel="tag"># c++</a>
+              <a href="/tags/%E4%BD%BF%E7%94%A8%E8%A7%84%E8%8C%83/" rel="tag"># 使用规范</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://fengnian23333.github.io/2026/03/24/%E8%BF%91%E5%86%B5/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/20200504005349_ljnrh.jpg">
-      <meta itemprop="name" content="符风年">
-      <meta itemprop="description" content="符风年的个人博客，记录技术、阅读、生活与思考。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="风年年年">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2026/03/24/%E8%BF%91%E5%86%B5/" class="post-title-link" itemprop="url">近况（2026.3.24）</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2026-03-24 20:11:33 / 修改时间：20:14:38" itemprop="dateCreated datePublished" datetime="2026-03-24T20:11:33+08:00">2026-03-24</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>85</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>最近的想法……</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2026/03/24/%E8%BF%91%E5%86%B5/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://fengnian23333.github.io/2025/12/17/learn-guohezu/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/20200504005349_ljnrh.jpg">
-      <meta itemprop="name" content="符风年">
-      <meta itemprop="description" content="符风年的个人博客，记录技术、阅读、生活与思考。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="风年年年">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2025/12/17/learn-guohezu/" class="post-title-link" itemprop="url">学习过河卒</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2025-12-17 18:53:21" itemprop="dateCreated datePublished" datetime="2025-12-17T18:53:21+08:00">2025-12-17</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2026-03-24 18:57:07" itemprop="dateModified" datetime="2026-03-24T18:57:07+08:00">2026-03-24</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>4.1k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>4 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>一篇关于动态规划算法的笔记。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2025/12/17/learn-guohezu/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2026/03/24/%E8%BF%91%E5%86%B5/" rel="prev" title="近况（2026.3.24）">
+      <i class="fa fa-chevron-left"></i> 近况（2026.3.24）
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
@@ -534,6 +373,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B9%B1%E7%94%A8-using-namespace-std-%E5%B0%86%E4%BC%9A%E5%B8%A6%E6%9D%A5%E7%9A%84%E5%9B%9B%E4%B8%AA%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">乱用 using namespace std; 将会带来的四个常见问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8D%E5%AD%97%E5%86%B2%E7%AA%81"><span class="nav-number">1.1.</span> <span class="nav-text">名字冲突</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%94%99%E8%AF%AF%E7%A4%BA%E4%BE%8B%EF%BC%88%E9%87%8D%E5%90%8D%E5%B4%A9%E6%BA%83%EF%BC%89"><span class="nav-number">1.1.1.</span> <span class="nav-text">错误示例（重名崩溃）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%8F%AF%E8%AF%BB%E6%80%A7%E6%9E%81%E5%B7%AE"><span class="nav-number">1.2.</span> <span class="nav-text">代码可读性极差</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E6%AF%94"><span class="nav-number">1.2.1.</span> <span class="nav-text">对比</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B1%A1%E6%9F%93%E5%85%A8%E5%B1%80%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4"><span class="nav-number">1.3.</span> <span class="nav-text">污染全局命名空间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%A7%E7%94%9F%E6%AD%A7%E4%B9%89%EF%BC%8C%E5%AF%BC%E8%87%B4%E8%AF%A1%E5%BC%82Bug"><span class="nav-number">1.4.</span> <span class="nav-text">产生歧义，导致诡异Bug</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%AD%A3%E7%A1%AE%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F%EF%BC%88%E6%8E%A8%E8%8D%90%E4%BC%98%E5%85%88%E7%BA%A7%E4%BB%8E%E9%AB%98%E5%88%B0%E4%BD%8E%EF%BC%89"><span class="nav-number">2.</span> <span class="nav-text">正确的使用方式（推荐优先级从高到低）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E4%BD%B3%E6%96%B9%E6%A1%88%EF%BC%9A%E6%98%BE%E5%BC%8F%E5%86%99-std-%EF%BC%88%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E5%BC%BA%E5%88%B6%E7%94%A8%EF%BC%89"><span class="nav-number">2.1.</span> <span class="nav-text">最佳方案：显式写 std::（项目开发强制用）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%98%E4%B8%AD%E6%96%B9%E6%A1%88%EF%BC%9A%E5%8F%AA%E5%AF%BC%E5%85%A5%E9%9C%80%E8%A6%81%E7%9A%84%E6%88%90%E5%91%98"><span class="nav-number">2.2.</span> <span class="nav-text">折中方案：只导入需要的成员</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B1%80%E9%83%A8%E6%96%B9%E6%A1%88%EF%BC%9A%E4%BB%85%E5%9C%A8%E5%87%BD%E6%95%B0%E5%86%85%E4%BD%BF%E7%94%A8"><span class="nav-number">2.3.</span> <span class="nav-text">局部方案：仅在函数内使用</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
