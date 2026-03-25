@@ -1,6 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>html笔记-1</title>
+    <url>/2026/03/25/html%E7%AC%94%E8%AE%B0-1/</url>
+    <content><![CDATA[<p>HTML 文档的基本结构关键字（标签）如下：</p>
+<table>
+<thead>
+<tr>
+<th>标签</th>
+<th>作用</th>
+<th>详情</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>&lt;!DOCTYPE html&gt;</code></td>
+<td>指定 HTML 文档的版本。</td>
+<td><a href="/glossary/#doctype" target="_blank">查看</a></td>
+</tr>
+<tr>
+<td><code>&lt;html&gt;</code></td>
+<td>定义整个 HTML 文档的根元素，包裹所有内容。</td>
+<td><a href="/glossary/#html" target="_blank">查看</a></td>
+</tr>
+<tr>
+<td><code>&lt;head&gt;</code></td>
+<td>定义文档的头部信息，包括标题、字符集、编码等。</td>
+<td><a href="/glossary/#head" target="_blank">查看</a></td>
+</tr>
+<tr>
+<td><code>&lt;title&gt;</code></td>
+<td>定义页面的标题。</td>
+<td><a href="/glossary/#title" target="_blank">查看</a></td>
+</tr>
+<tr>
+<td><code>&lt;body&gt;</code></td>
+<td>定义网页的主要内容区域。</td>
+<td><a href="/glossary/#body" target="_blank">查看</a></td>
+</tr>
+<tr>
+<td><code>&lt;h1&gt;~&lt;h6&gt;</code></td>
+<td>定义页面中不同级别的标题。</td>
+<td><a href="/glossary/#headings" target="_blank">查看</a></td>
+</tr>
+<tr>
+<td><code>&lt;p&gt;</code></td>
+<td>定义段落。</td>
+<td><a href="/glossary/#p" target="_blank">查看</a></td>
+</tr>
+<tr>
+<td><code>&lt;ul&gt;</code></td>
+<td>定义无序列表。</td>
+<td><a href="/glossary/#ul" target="_blank">查看</a></td>
+</tr>
+<tr>
+<td><code>&lt;li&gt;</code></td>
+<td>定义列表项。</td>
+<td><a href="/glossary/#li" target="_blank">查看</a></td>
+</tr>
+<tr>
+<td><code>&lt;a&gt;</code></td>
+<td>定义超链接。</td>
+<td><a href="/glossary/#a" target="_blank">查看</a></td>
+</tr>
+<tr>
+<td><code>&lt;img&gt;</code></td>
+<td>定义图片。</td>
+<td><a href="/glossary/#img" target="_blank">查看</a></td>
+</tr>
+<tr>
+<td><code>&lt;div&gt;</code></td>
+<td>定义容器。</td>
+<td><a href="/glossary/#div" target="_blank">查看</a></td>
+</tr>
+<tr>
+<td><code>&lt;span&gt;</code></td>
+<td>定义文本或行内元素。</td>
+<td><a href="/glossary/#span" target="_blank">查看</a></td>
+</tr>
+</tbody></table>
+<!-- <a href="/glossary/#???" target="_blank">查看详情</a>用于关键字跳转 -->
+
+<p>一个最简 HTML 结构示例：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh-CN&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>页面标题<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 页面内容 --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>这些是构成一个有效 HTML 文档的<strong>必备关键字</strong>。</p>
+<h2 id="持续更新中…………"><a href="#持续更新中…………" class="headerlink" title="持续更新中…………"></a>持续更新中…………</h2>]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>html</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>学习过河卒</title>
     <url>/2025/12/17/learn-guohezu/</url>
     <content><![CDATA[<h1 id="本周学习记录"><a href="#本周学习记录" class="headerlink" title="本周学习记录"></a>本周学习记录</h1><h3 id="过河卒"><a href="#过河卒" class="headerlink" title="过河卒"></a>过河卒</h3><p>最初的设想是遍历下右路径，遇到障碍记录，重新跑，即<strong>暴力递归</strong>。</p>
@@ -72,6 +164,20 @@
       </tags>
   </entry>
   <entry>
+    <title>近况（2026.3.24）</title>
+    <url>/2026/03/24/%E8%BF%91%E5%86%B5/</url>
+    <content><![CDATA[<h1 id="搞一个项目————自定义题库答题软件"><a href="#搞一个项目————自定义题库答题软件" class="headerlink" title="搞一个项目————自定义题库答题软件"></a>搞一个项目————自定义题库答题软件</h1><p>目前需要实现的功能太多，总结起来实在麻烦，还要备考计算机二级考试，属实麻烦啊。</p>
+<p>过段时间把项目策划给写出来，另外还想部署一下codex。</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>生活</tag>
+        <tag>日常</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>关于不能在文件头随意使用using namespace std</title>
     <url>/2026/03/25/%E5%85%B3%E4%BA%8E%E4%B8%8D%E8%83%BD%E5%9C%A8%E6%96%87%E4%BB%B6%E5%A4%B4%E9%9A%8F%E6%84%8F%E4%BD%BF%E7%94%A8using-namespace-std/</url>
     <content><![CDATA[<p>在 C++ 里，<code>using namespace std;</code> 不是<strong>不能用</strong>，而是<strong>不能随意使用</strong>（尤其是大型项目、工程开发中）。<br>核心原因只有一个：<strong>它会把标准库的所有名称全部暴露到全局作用域，打破了命名空间的隔离保护</strong>。</p>
@@ -112,20 +218,6 @@
       <tags>
         <tag>c++</tag>
         <tag>使用规范</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>近况（2026.3.24）</title>
-    <url>/2026/03/24/%E8%BF%91%E5%86%B5/</url>
-    <content><![CDATA[<h1 id="搞一个项目————自定义题库答题软件"><a href="#搞一个项目————自定义题库答题软件" class="headerlink" title="搞一个项目————自定义题库答题软件"></a>搞一个项目————自定义题库答题软件</h1><p>目前需要实现的功能太多，总结起来实在麻烦，还要备考计算机二级考试，属实麻烦啊。</p>
-<p>过段时间把项目策划给写出来，另外还想部署一下codex。</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>生活</tag>
-        <tag>日常</tag>
       </tags>
   </entry>
 </search>
