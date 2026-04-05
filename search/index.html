@@ -27,8 +27,8 @@
 <meta property="og:site_name" content="风年年年">
 <meta property="og:description" content="寻找你想得到的东西。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2026-04-05T04:59:21.960Z">
-<meta property="article:modified_time" content="2025-12-22T12:47:00.333Z">
+<meta property="article:published_time" content="2026-04-05T10:26:49.990Z">
+<meta property="article:modified_time" content="2026-04-05T10:26:49.990Z">
 <meta property="article:author" content="符风年">
 <meta property="article:tag" content="个人博客, 符嘉哲, 风年年年, 风年, 技术, 生活, 随笔">
 <meta name="twitter:card" content="summary">
@@ -175,6 +175,7 @@
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
+<div id="search-controls" class="search-controls"></div>
 <div id="search-result">
   <div id="no-result">
     <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
@@ -226,7 +227,28 @@
       
       
       <div class="post-body">
-          
+          <div class="search-page">
+  <section class="search-page-hero">
+    <p class="search-page-kicker">LOCAL SEARCH</p>
+    <h2 class="search-page-title">站内检索</h2>
+    <p class="search-page-desc">输入关键词即可检索文章标题和正文内容，支持多关键词组合。</p>
+  </section>
+
+  <section class="search-page-panel">
+    <label class="search-page-label" for="search-page-input">关键词</label>
+    <div class="search-page-input-wrap">
+      <i class="fa fa-search" aria-hidden="true"></i>
+      <input id="search-page-input" class="search-page-input" type="search" placeholder="例如：html 进制转换" autocomplete="off" spellcheck="false">
+    </div>
+    <p class="search-page-tip">按空格可组合多个关键词，结果按匹配度排序。</p>
+  </section>
+
+  <div id="search-page-controls" class="search-controls search-page-controls"></div>
+  <div id="search-page-result" class="search-page-result">
+    <div class="search-empty">输入关键词开始搜索</div>
+  </div>
+</div>
+
       </div>
       
       
@@ -287,6 +309,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-text">站内检索</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
