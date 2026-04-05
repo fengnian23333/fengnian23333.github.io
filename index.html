@@ -17,21 +17,21 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"fengnian23333.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true,"path":"search.xml"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"fengnian.wiki","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true,"path":"search.xml"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta property="og:type" content="website">
 <meta property="og:title" content="首页">
-<meta property="og:url" content="https://fengnian23333.github.io/">
+<meta property="og:url" content="https://fengnian.wiki/">
 <meta property="og:site_name" content="风年年年">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2026-03-24T12:04:09.772Z">
+<meta property="article:published_time" content="2026-04-05T04:59:21.959Z">
 <meta property="article:modified_time" content="2026-03-24T12:01:56.028Z">
 <meta property="article:author" content="符风年">
 <meta property="article:tag" content="个人博客, 符嘉哲, 风年年年, 风年, 技术, 生活, 随笔">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://fengnian23333.github.io/">
+<link rel="canonical" href="https://fengnian.wiki/">
 
 
 <script id="page-configurations">
@@ -44,7 +44,7 @@
   };
 </script>
 
-  <title></title>
+  <title>首页 | 风年年年</title>
   
 
 
@@ -199,482 +199,172 @@
   
   
 
-          <div class="content ">
+          <div class="content home-landing-page">
             
-
-<style>
-/* ==================== CSS 变量定义（更柔和的配色） ==================== */
-:root {
-  --primary-color: #9370db;       /* 主色调：温柔紫（更沉稳） */
-  --secondary-color: #7b68ee;     /* 辅助色 */
-  --accent-color: #b19cd9;        /* 强调色 */
-  --bg-color: #f9fafb;            /* 页面背景色，更浅更干净 */
-  --card-bg: #ffffff;             /* 卡片背景，白色 */
-  --text-main: #1f2937;           /* 主文字色（更深，可读性更强） */
-  --text-sub: #6b7280;            /* 辅助文字色 */
-  --text-light: #9ca3af;          /* 更淡的文字色 */
-  --shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.06); /* 更柔和的阴影 */
-  --shadow-hover: 0 8px 24px rgba(147, 112, 219, 0.12); /* hover 阴影 */
-  --radius-lg: 20px;              /* 更大更圆润的圆角 */
-  --radius-md: 10px;              /* 小圆角 */
-  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); /* 更丝滑的过渡曲线 */
-  --envelope-bg: #fffaf0;         /* 信封信纸米黄色（更暖） */
-  --envelope-border: #cd853f;     /* 信封边框棕黄色（更复古） */
-  --border-color: #e5e7eb;       /* 通用边框色 */
-}
-
-/* ==================== 全局布局 ==================== */
-body {
-  background-color: var(--bg-color);
-  color: var(--text-main);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-  line-height: 1.6;
-}
-
-.custom-home {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 40px 24px;
-}
-
-/* ==================== 通用模块：卡片边框 ==================== */
-.custom-home section {
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-lg);
-  padding: 28px;
-  margin-bottom: 32px;
-  box-shadow: var(--shadow-soft);
-  transition: var(--transition);
-}
-
-/* 模块 hover 效果：轻微上浮+阴影加深 */
-.custom-home section:hover {
-  box-shadow: var(--shadow-hover);
-  transform: translateY(-3px);
-  border-color: var(--accent-color);
-}
-
-/* ==================== 头部欢迎区域：信封效果（更精致） ==================== */
-.hero-header {
-  background: var(--envelope-bg);
-  border: 2px solid var(--envelope-border);
-  border-radius: var(--radius-lg);
-  padding: 40px 32px;
-  margin-bottom: 48px;
-  text-align: center;
-  position: relative;
-  box-shadow: 0 6px 24px rgba(0,0,0,0.06);
-}
-
-/* 模拟信封封口的装饰线（更精致） */
-.hero-header::before {
-  content: '';
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 75%;
-  height: 1px;
-  background: var(--envelope-border);
-  opacity: 0.7;
-}
-
-.hero-header::after {
-  content: '';
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 75%;
-  height: 1px;
-  background: var(--envelope-border);
-  opacity: 0.7;
-}
-
-.hero-header h1 {
-  font-size: 2.2rem;
-  margin: 0 0 20px 0;
-  color: var(--text-main);
-  font-weight: 700;
-  border-bottom: 1px dashed var(--envelope-border);
-  padding-bottom: 12px;
-  letter-spacing: 1px;
-}
-
-.hero-header p {
-  margin: 12px 0;
-  color: var(--text-sub);
-  font-size: 1.05rem;
-  line-height: 1.8;
-}
-
-.hero-quote {
-  margin-top: 20px;
-  font-style: italic;
-  color: var(--text-sub);
-  font-size: 1.1rem;
-  border-left: none;
-}
-
-/* ==================== 标题样式 ==================== */
-.module-title {
-  font-size: 1.3rem;
-  margin: 0 0 20px 0;
-  color: var(--text-main);
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  border-bottom: 1px solid #f3f4f6;
-  padding-bottom: 10px;
-}
-
-/* ==================== 最新文章（更清晰的列表） ==================== */
-.post-list .post-item {
-  margin-bottom: 14px;
-  padding: 10px 14px;
-  border-radius: var(--radius-md);
-  transition: var(--transition);
-  border-left: 3px solid transparent;
-}
-
-.post-list .post-item:hover {
-  background: #f8fafc;
-  border-left-color: var(--primary-color);
-}
-
-.post-list .post-item a {
-  color: var(--primary-color);
-  text-decoration: none;
-  font-size: 1.05rem;
-  transition: var(--transition);
-}
-
-.post-list .post-item a:hover {
-  color: var(--secondary-color);
-}
-
-/* ==================== 分类&标签 双列布局（响应式优化） ==================== */
-.two-col-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-  margin-bottom: 40px;
-}
-
-@media (max-width: 768px) {
-  .two-col-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-}
-
-/* 分类列表 */
-.category-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.category-list li {
-  margin-bottom: 12px;
-  padding: 8px 12px;
-  border-radius: var(--radius-md);
-  transition: var(--transition);
-}
-
-.category-list li:hover {
-  background: #f8fafc;
-}
-
-.category-list li a {
-  color: var(--text-main);
-  text-decoration: none;
-  transition: var(--transition);
-}
-
-.category-list li a:hover {
-  color: var(--primary-color);
-}
-
-/* 标签云（更活泼的胶囊样式） */
-.tag-cloud {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.tag-cloud .tag-item {
-  color: var(--text-sub);
-  text-decoration: none;
-  background: #f3f4f6;
-  padding: 8px 16px;
-  border-radius: 50px;
-  transition: var(--transition);
-  font-size: 0.9rem;
-  border: 1px solid transparent;
-}
-
-.tag-cloud .tag-item:hover {
-  background: var(--primary-color);
-  color: white;
-  transform: scale(1.08);
-  border-color: var(--primary-color);
-}
-
-/* ==================== 关于我区域 ==================== */
-.about-module blockquote {
-  border-left: 4px solid var(--primary-color);
-  padding-left: 18px;
-  color: var(--text-sub);
-  font-style: italic;
-  margin: 20px 0;
-  background: #f9fafb;
-  padding: 14px 18px;
-  border-radius: 0 var(--radius-md) var(--radius-md) 0;
-}
-
-.about-img {
-  width: 100%;
-  border-radius: var(--radius-md);
-  margin: 24px 0;
-  box-shadow: var(--shadow-soft);
-  border: 4px solid white;
-  transition: var(--transition);
-}
-
-.about-img:hover {
-  transform: scale(1.02);
-}
-
-/* ==================== 博客数据统计（更现代的卡片） ==================== */
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 24px;
-  margin-top: 20px;
-}
-
-.stats-grid .stat-item {
-  text-align: center;
-  padding: 20px;
-  background: #f8fafc;
-  border-radius: var(--radius-md);
-  transition: var(--transition);
-  border: 1px solid transparent;
-}
-
-.stats-grid .stat-item:hover {
-  background: var(--primary-color);
-  color: white;
-  border-color: var(--primary-color);
-}
-
-.stat-item .stat-number {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--primary-color);
-  display: block;
-  margin-bottom: 6px;
-}
-
-/* hover 时数字和文字都变白 */
-.stats-grid .stat-item:hover .stat-number,
-.stats-grid .stat-item:hover .stat-label {
-  color: white;
-}
-
-.stat-item .stat-label {
-  font-size: 0.95rem;
-  color: var(--text-sub);
-}
-
-/* ==================== 快速链接（更精致的按钮） ==================== */
-.links-group {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  flex-wrap: wrap;
-  margin: 24px 0;
-}
-
-.links-group a {
-  color: var(--text-sub);
-  text-decoration: none;
-  transition: var(--transition);
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 10px 20px;
-  border-radius: 50px;
-  border: 1px solid var(--border-color);
-}
-
-.links-group a:hover {
-  color: var(--primary-color);
-  border-color: var(--primary-color);
-  background: #f8fafc;
-  transform: translateY(-2px);
-}
-
-/* ==================== 页脚信息（更简洁） ==================== */
-.footer-info {
-  margin-top: 48px;
-  text-align: center;
-  font-size: 0.85rem;
-  color: var(--text-light);
-  line-height: 1.8;
-  background: none;
-  border: none;
-  box-shadow: none;
-  padding: 0;
-}
-
-.footer-info a {
-  color: var(--text-light);
-  text-decoration: none;
-  transition: var(--transition);
-}
-
-.footer-info a:hover {
-  color: var(--primary-color);
-}
-</style>
-
-
-<div class="custom-home">
-
   
-  <section class="hero-header">
-    <h1>风年年年</h1>
-    <p>欢迎来到符风年的个人博客！这里记录技术、阅读、生活与思考。</p>
-    <p class="hero-quote">故事的结局重不重要？ —— 或许过程才更值得回味。</p>
-  </section>
-
   
-  <section class="post-list">
-    <h2 class="module-title">📝 最新文章</h2>
-    
-    
-      
-        <div class="post-item">
-          <a href="/2026/03/26/html%E5%9F%BA%E7%A1%80/">html基础</a>
-        </div>
-      
-        <div class="post-item">
-          <a href="/2025/12/17/learn-guohezu/">学习过河卒</a>
-        </div>
-      
-        <div class="post-item">
-          <a href="/2026/03/24/%E8%BF%91%E5%86%B5/">近况（2026.3.24）</a>
-        </div>
-      
-        <div class="post-item">
-          <a href="/2026/03/25/html%E7%AC%94%E8%AE%B0-1/">html笔记-1</a>
-        </div>
-      
-        <div class="post-item">
-          <a href="/2026/03/25/%E5%85%B3%E4%BA%8E%E4%B8%8D%E8%83%BD%E5%9C%A8%E6%96%87%E4%BB%B6%E5%A4%B4%E9%9A%8F%E6%84%8F%E4%BD%BF%E7%94%A8using-namespace-std/">关于不能在文件头随意使用using namespace std</a>
-        </div>
-      
-    
-  </section>
-
   
-  <div class="two-col-grid">
-    
-    <section>
-      <h2 class="module-title">📂 分类</h2>
-      
-      <ul class="category-list">
-      
-        
-          <li><a href="/categories/Html%E6%97%A5%E5%BF%97/">● Html日志</a></li>
-        
-          <li><a href="/categories/%E6%8A%80%E6%9C%AF/">● 技术</a></li>
-        
-          <li><a href="/categories/%E7%94%9F%E6%B4%BB/">● 生活</a></li>
-        
-      
-      </ul>
-    </section>
 
-    
-    <section>
-      <h2 class="module-title">🏷️ 标签</h2>
+  <div class="home-landing">
+    <section class="home-hero">
+      <p class="home-hero-kicker">Personal Blog</p>
+      <h1 class="home-hero-title">风年年年</h1>
       
-      <div class="tag-cloud">
+        <p class="home-hero-subtitle">故事的结局重不重要</p>
       
-        
-          <a href="/tags/html/" class="tag-item">html</a>
-        
-          <a href="/tags/C%E8%AF%AD%E8%A8%80/" class="tag-item">C语言</a>
-        
-          <a href="/tags/%E5%AD%A6%E4%B9%A0/" class="tag-item">学习</a>
-        
-          <a href="/tags/%E7%AC%94%E8%AE%B0/" class="tag-item">笔记</a>
-        
-          <a href="/tags/%E7%94%9F%E6%B4%BB/" class="tag-item">生活</a>
-        
-          <a href="/tags/%E6%97%A5%E5%B8%B8/" class="tag-item">日常</a>
-        
-          <a href="/tags/c/" class="tag-item">c++</a>
-        
-          <a href="/tags/%E4%BD%BF%E7%94%A8%E8%A7%84%E8%8C%83/" class="tag-item">使用规范</a>
-        
       
+        <p class="home-hero-description">符风年的个人博客，记录技术、阅读、生活与思考。</p>
+      
+      <div class="home-actions">
+        <a class="home-action home-action-primary" href="/blog/">阅读最新文章</a>
+        <a class="home-action" href="/archives/">查看归档</a>
+        <a class="home-action" href="/tags/">浏览标签</a>
       </div>
     </section>
+
+    <section class="home-stats" aria-label="站点统计">
+      <div class="home-stat-card">
+        <span class="home-stat-value">6</span>
+        <span class="home-stat-label">文章</span>
+      </div>
+      <div class="home-stat-card">
+        <span class="home-stat-value">4</span>
+        <span class="home-stat-label">分类</span>
+      </div>
+      <div class="home-stat-card">
+        <span class="home-stat-value">9</span>
+        <span class="home-stat-label">标签</span>
+      </div>
+    </section>
+
+    <div class="home-grid">
+      <section class="home-panel home-panel-posts">
+        <div class="home-panel-head">
+          <h2>最近更新</h2>
+          <a href="/blog/">全部文章</a>
+        </div>
+        
+          <ul class="home-post-list">
+            
+              <li class="home-post-item">
+                <a href="/2026/03/26/html%E5%9F%BA%E7%A1%80/">html基础</a>
+                <time datetime="2026-03-26">2026-03-26</time>
+              </li>
+            
+              <li class="home-post-item">
+                <a href="/2026/03/25/html%E7%AC%94%E8%AE%B0-1/">html笔记-1</a>
+                <time datetime="2026-03-25">2026-03-25</time>
+              </li>
+            
+              <li class="home-post-item">
+                <a href="/2026/03/25/%E5%85%B3%E4%BA%8E%E4%B8%8D%E8%83%BD%E5%9C%A8%E6%96%87%E4%BB%B6%E5%A4%B4%E9%9A%8F%E6%84%8F%E4%BD%BF%E7%94%A8using-namespace-std/">关于不能在文件头随意使用using namespace std</a>
+                <time datetime="2026-03-25">2026-03-25</time>
+              </li>
+            
+              <li class="home-post-item">
+                <a href="/2025/12/17/learn-guohezu/">学习过河卒</a>
+                <time datetime="2025-12-17">2025-12-17</time>
+              </li>
+            
+              <li class="home-post-item">
+                <a href="/2026/03/24/%E8%BF%91%E5%86%B5/">近况（2026.3.24）</a>
+                <time datetime="2026-03-24">2026-03-24</time>
+              </li>
+            
+              <li class="home-post-item">
+                <a href="/2026/03/28/%E8%BD%AF%E8%80%83%E7%AC%94%E8%AE%B0--1--%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/">软考笔记--1--进制转换</a>
+                <time datetime="2026-03-28">2026-03-28</time>
+              </li>
+            
+          </ul>
+        
+      </section>
+
+      <section class="home-panel home-panel-taxonomy">
+        <div class="home-panel-head">
+          <h2>分类与标签</h2>
+          <a href="/categories/">查看分类</a>
+        </div>
+
+        
+          <ul class="home-category-list">
+            
+              <li>
+                <a href="/categories/Html%E6%97%A5%E5%BF%97/">Html日志</a>
+                <span>1</span>
+              </li>
+            
+              <li>
+                <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+                <span>3</span>
+              </li>
+            
+              <li>
+                <a href="/categories/%E7%94%9F%E6%B4%BB/">生活</a>
+                <span>1</span>
+              </li>
+            
+              <li>
+                <a href="/categories/%E8%BD%AF%E8%80%83%E5%A4%87%E8%80%83/">软考备考</a>
+                <span>1</span>
+              </li>
+            
+          </ul>
+        
+
+        
+          <div class="home-tag-grid">
+            
+              <a href="/tags/html/">
+                html
+                <span>2</span>
+              </a>
+            
+              <a href="/tags/c/">
+                c++
+                <span>1</span>
+              </a>
+            
+              <a href="/tags/%E4%BD%BF%E7%94%A8%E8%A7%84%E8%8C%83/">
+                使用规范
+                <span>1</span>
+              </a>
+            
+              <a href="/tags/C%E8%AF%AD%E8%A8%80/">
+                C语言
+                <span>1</span>
+              </a>
+            
+              <a href="/tags/%E5%AD%A6%E4%B9%A0/">
+                学习
+                <span>1</span>
+              </a>
+            
+              <a href="/tags/%E7%AC%94%E8%AE%B0/">
+                笔记
+                <span>1</span>
+              </a>
+            
+              <a href="/tags/%E7%94%9F%E6%B4%BB/">
+                生活
+                <span>1</span>
+              </a>
+            
+              <a href="/tags/%E6%97%A5%E5%B8%B8/">
+                日常
+                <span>1</span>
+              </a>
+            
+              <a href="/tags/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/">
+                进制转换
+                <span>1</span>
+              </a>
+            
+          </div>
+        
+      </section>
+    </div>
   </div>
-
-  
-  <section class="about-module">
-    <h2 class="module-title">🤚 关于我</h2>
-    <p>你好！我是<strong>符嘉哲</strong>（笔名：风年年年）。</p>
-    <p>一名前端工程师兼独立开发者。热爱技术，享受生活。</p>
-    <blockquote>
-      "保持好奇，持续成长。生活如代码，总有 bug，但修复后更优雅。"
-    </blockquote>
-    
-    <img src="/images/20200504005349_ljnrh.jpg" alt="百毒不侵猫咪" class="about-img">
-  </section>
-
-  
-  <section>
-    <h2 class="module-title">📊 博客数据</h2>
-    <div class="stats-grid">
-      <div class="stat-item">
-        <span class="stat-number">5</span>
-        <span class="stat-label">文章总数</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number">3</span>
-        <span class="stat-label">分类数量</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number">8</span>
-        <span class="stat-label">标签数量</span>
-      </div>
-    </div>
-  </section>
-
-  
-  <section>
-    <h2 class="module-title" style="justify-content: center;">🔗 快速抵达</h2>
-    <div class="links-group">
-      <a href="/archives/">📚 归档</a>
-      <a href="/tags/">☁️ 标签云</a>
-      <a href="https://github.com/fengnian23333" target="_blank">💻 GitHub</a>
-    </div>
-  </section>
-
-  
-  <section class="footer-info">
-    <p>© 2025 - 2026 ⚡ 风年先生 | 保留所有权利 | 🌐 6k | ⏱️ 6分钟</p>
-  </section>
-
-</div>
 
           </div>
           
@@ -808,6 +498,60 @@ body {
   
 
   
+<button id="reading-mode-switch" class="reading-mode-switch" type="button" aria-live="polite" aria-label="切换到夜间模式" title="切换到夜间模式">
+  <span class="reading-mode-switch__icon" aria-hidden="true">☀</span>
+  <span class="reading-mode-switch__text">日间</span>
+</button>
+
+<script>
+  (function() {
+    var STORAGE_KEY = 'reading-mode';
+    var root = document.documentElement;
+    var switcher = document.getElementById('reading-mode-switch');
+    if (!switcher) return;
+
+    var icon = switcher.querySelector('.reading-mode-switch__icon');
+    var text = switcher.querySelector('.reading-mode-switch__text');
+
+    function getInitialMode() {
+      try {
+        var saved = localStorage.getItem(STORAGE_KEY);
+        if (saved === 'light' || saved === 'dark') return saved;
+      } catch (e) {}
+      return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    function updateMode(mode) {
+      var isDark = mode === 'dark';
+      root.setAttribute('data-reading-mode', mode);
+      switcher.setAttribute('data-mode', mode);
+      if (icon) icon.textContent = isDark ? '☾' : '☀';
+      if (text) text.textContent = isDark ? '夜间' : '日间';
+      var nextLabel = isDark ? '切换到日间模式' : '切换到夜间模式';
+      switcher.setAttribute('aria-label', nextLabel);
+      switcher.title = nextLabel;
+    }
+
+    function toggleMode() {
+      var current = root.getAttribute('data-reading-mode') === 'dark' ? 'dark' : 'light';
+      var next = current === 'dark' ? 'light' : 'dark';
+      updateMode(next);
+      try {
+        localStorage.setItem(STORAGE_KEY, next);
+      } catch (e) {}
+    }
+
+    updateMode(getInitialMode());
+    switcher.addEventListener('click', toggleMode);
+    switcher.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        toggleMode();
+      }
+    });
+  })();
+</script>
+
 
 </body>
 </html>
